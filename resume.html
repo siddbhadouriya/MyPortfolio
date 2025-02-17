@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito',sans-serif;
+        }
+        :root{
+            --font-color:#474950;
+            --second-color:#a9a7b1;
+
+        }
+       
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(178deg,#482feb,#9824ff);
+            height: 150vh;
+           
+        }
+        header {
+            background-color: rgb(31, 31, 32);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header a {
+            text-decoration: none;
+            color: rgb(146, 198, 220);
+            font-size: 1.2rem;
+        }
+
+        .clearfix{
+            clear: both;
+        }
+        .resume-box{
+            width: 800px;
+            height: 1200px;
+            padding: 50px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .box-outer{
+            padding: 30px;
+        }
+        .box-1{
+            width: 30%;
+            float: left;
+            height: 1000px;
+            padding-right: 39px;
+        }
+        .box-2{
+            width: 60%;
+            float: left;
+            padding: 0px 20px ;
+            
+        }
+        .name{
+            letter-spacing: 5px;
+            font-family: arial;
+            color: var(--font-color);
+            line-height: 39px;
+            
+            float: left;
+            font-weight: bold;
+            
+        }
+        .contact_p{
+            color: var(--font-color);
+            padding: 9px;
+            margin: 5px 0;
+            margin-top: 10px;
+            text-align: right;
+
+        }
+        .fontfa{
+            padding:8px;
+            background-color: var(--font-color);
+            color: white;
+            border-radius: 15px;
+            width: 14px;
+            text-align: center;
+
+
+        }
+        .name_p{
+
+    
+            float: left;
+            text-transform: uppercase;
+            color: var(--font-color);
+            letter-spacing: 2px;
+        }
+        .profile{
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 10px;
+            border: 3px solid var(--font-color);
+            margin-top: 15px;
+        }
+        .content{
+            padding: 0px;
+        }
+        h1{
+            color: var(--font-color);
+            font-weight:300;
+            text-transform: uppercase;
+        }
+        p{
+            color:var(--font-color);
+            font-weight: 300;
+            font-size: 14px;
+        }
+        ul{
+            list-style:none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        ul:before{
+            content: "";
+            display: inline-block;
+            width: 2px;
+            background: #47494f2b;
+            position: absolute;
+            left: 3px;
+            top: 5px;
+            height: calc(100% - 10px);
+        }
+        ul li{
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+
+        }
+        ul li:before{
+            content: "";
+            display: inline-block;
+            width:10px;
+            height: 10px;
+            background: var(--second-color);
+            position: absolute;
+            left: -1px;
+            top: 5px;
+            border-radius: 10px;
+        }
+        #progress,#progress1,#progress2,#progress3{
+            background: #47494f00;
+            height: 2px;
+            width: 100%;
+            border: 1px solid #c0c1c3;
+
+        }
+        #progress::after,#progress1::after,#progress2::after,#progress3::after{
+            content: "";
+            display: block;
+            background: var(--second-color);
+            height: 100%;
+        }
+        #progress::after { width: calc(80%); } /* 80% Progress */
+        #progress1::after { width: calc(70%); } /* 70% Progress */
+        #progress2::after { width: calc(60%); } /* 60% Progress */
+        #progress3::after { width: calc(90%); } /* 90% Progress */
+
+        .col-sm-5{
+            width: 50%; 
+            float: left;  
+              
+            
+        }
+        .col-sm-6{
+            width: 50%; 
+            float: left; 
+            margin-top: 55px;
+
+        }
+        .head{
+            color: var(--font-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+        .para-1{
+            font-size: 14px;
+            text-transform: uppercase;
+            color: black;
+            font-weight: 400;
+            margin: 5px 0px;
+            margin-top: 10px;
+        }
+        .para-2{
+            font-size: 14px;
+            text-transform: capitalize;
+            color: var(--second-color);
+            font-weight: 400;
+            margin-bottom: 20px;
+            margin-top: 0px;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a href="index.html">Back to Home</a>
+    </header>
+    <!-- skill section -->
+    <main>
+        <div class="box-outer">
+            <div class="resume-box">
+                <div>
+                    <div class="col-sm-5">
+                        <img src="mypic.JPG"  class="profile">
+                        <h1 class="name"> Siddhartha <br/>Singh</h1>
+                        <p class="name_p">Frontend Development</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div style="float: right;">
+                            <p class="contact_p">
+                                <i class="fa fa-home fontfa">
+                                    &nbsp;2132 India ,Utter Pradesh
+                                </i>
+                            </p>
+                            <p class="contact_p">
+                                <i class="fa fa-phone fontfa">
+                                    &nbsp; Phone +(91)8874379646 </i>
+                            </p>
+                            <p class="contact_p">
+                                <i class="fa fa-envelope fontfa">
+                                    &nbsp; Email : siddharthasinghbhadouriya80@gmail.com
+                                </i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br/>
+                    <hr/>
+                    <h1 class="head">Profile</h1>
+                    <p class="para-2">
+                        Passionate BCA graduate with expertise in frontend development.
+                         Skilled in HTML, CSS, JavaScript, and UI/UX design.
+                         Dedicated to creating responsive, user-friendly websites with
+                          a keen eye for design and functionality
+                    </p>
+                </div>
+                <hr/>
+                <br/>
+                <div class="box-1">
+                    <div class="content">
+                        <h1 class="head"> Education</h1>
+                        <br/>
+                        <hr/>
+                        <ul>
+                            <li>
+                                <p class="para-1">(2020 - 2021)<br/> High school of UP</p>
+                                <p class="para-2">Lorem Ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </li>
+                            <li>
+                                <p class="para-1">(2022 - 2023)<br/> Intermediate of UP</p>
+                                <p class="para-2">Lorem Ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </li>
+                            <li>
+                                <p class="para-1">(2023 - 2026)<br/> Bachelor of Computer Application</p>
+                                <p class="para-2">Lorem Ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </li>
+                        </ul>
+                        <h1 class="head">Skills</h1>
+                        <ul>
+                            <li>
+                                <p>HTML</p>
+                                <div id="progress"></div>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                                <div id="progress1"></div>
+                            </li>
+                            <li>
+                                <p>JavaScript</p>
+                                <div id="progress2"></div>
+                            </li>
+                            <li>
+                                <p>Web Design</p>
+                                <div id="progress3"></div>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <div class="box-2">
+                    <div class="content-2">
+                        <h1 class="head"> work Experience</h1>
+                        <br/>
+                        <ul>
+                            <li>
+                            <p class="para-1">Web Developing (Now)</p>
+                            <p class="para-2">  Passionate web developer with expertise in HTML, CSS, JavaScript, and modern frameworks.
+                                 Skilled in creating responsive, user-friendly websites with a focus on performance,
+                                 accessibility, and clean code for seamless user experiences..</p>
+                            </li>   
+                            <li>
+                                <p class="para-1"> UI Desinger(2023 - 2024)</p>
+                                <p class="para-2">  reative UI designer with expertise in crafting intuitive,
+                                     visually appealing interfaces. 
+                                    Skilled in design tools, user research,
+                                     and prototyping to enhance user experience and deliver seamless,.</p>
+                                </li>   
+                                <li>
+                                    <p class="para-1"> Graphic Designer (2024 - 2025)</p>
+                                    <p class="para-2"> Passionate graphic designer skilled in creating visually 
+                                        compelling designs for branding, marketing, and digital media. 
+                                        Expertise in Adobe Creative Suite, ..</p>
+                                    </li>   
+                                    <li>
+                                        <p class="para-1"> Web Developing(Now)</p>
+                                        <p class="para-2">  Passionate web developer with expertise in HTML, CSS, JavaScript, and modern frameworks.
+                                             Skilled in creating responsive, user-friendly websites with a focus on performance, 
+                                            accessibility, and clean code for seamless user experiences..</p>
+                                    </li>   
+                                    <li>
+                                        <p class="para-1">  UI Desinger (2023 - 2024)</p>
+                                        <p class="para-2">  reative UI designer with expertise in crafting intuitive,
+                                            visually appealing interfaces. 
+                                           Skilled in design tools, user research,
+                                            and prototyping to enhance user experience and deliver seamless,.</p>
+                                    </li>    
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="clearfix">
+
+            </div>
+        </dic>
+
+
+
+    </main>
+
+
+
+
+</body>
+</html>

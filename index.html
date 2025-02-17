@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siddhartha</title> - Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            background-color: rgb(41, 41, 42);
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            /* Ensures the transform is applied to the whole element */
+            transition: transform 0.1s ease, color 0.1s ease;
+        }
+
+        nav ul li a:hover {
+            color: #92c6dc;
+            /* Soft blue shade */
+            transform: scale(1.06);
+            /* Zoom in effect */
+        }
+
+
+
+
+        /* Main Section */
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px auto;
+            margin-left: 12%;
+            max-width: 1200px;
+        }
+
+        .leftSection {
+            width: 80%;
+            font-size: 1.7rem;
+        }
+
+        .leftSection .clf {
+            color: rgb(178, 97, 244);
+        }
+
+        .rightSection img {
+            width: 550px;
+            height: auto;
+            border-radius: 10px;
+            
+        }
+
+        /* Typing Animation */
+        #element {
+            color: rgb(178, 97, 244);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="left">Siddhartha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <p>Hi, my name is <span class="clf">Siddhartha</span>.
+                <p> I am a passionate web developer.</p>
+                <span id="element"></span>
+                <p class="spaced">
+                <p>
+                    I'm passionate about technology and continuously exploring new opportunities to enhance my skills in
+                    programming, problem-solving, and software development.<br>
+                    Welcome to my portfolio!</p>
+
+            </div>
+            <div class="rightSection">
+                <img src="png.png" alt="siddhartha's image">
+            </div>
+        </section>
+    </main>
+
+    <!-- Typed.js Integration -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['web developer', 'web designer', 'freelancer', 'video editor', 'content creator'],
+            typeSpeed: 70,
+        });
+    </script>
+</body>
+
+</html>

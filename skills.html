@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto',sans-serif;
+        }
+       
+         body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgb(31, 31, 32);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header a {
+            text-decoration: none;
+            color: rgb(146, 198, 220);
+            font-size: 1.2rem;
+        }
+        .inner{
+            padding-top: 20px;
+        }
+        .header2{
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            position: relative;
+        }
+        .header2::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 100px;
+            background-color: #2ecc71;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+
+        }
+        .skill-box{
+            padding: 1rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+            width: 35px;
+        }
+        .skill-box:hover .img{
+            transform: translateY(-10px);
+        }
+
+        .skill-title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .skill-title:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            width: 35px;
+            height: 4px;
+            border-radius: 2px 0 0 2px;
+            background-color: #2ecc71;
+            transition: .5s;
+        }
+        .skill-title:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0px;
+            height: 4px;
+            border-radius: 0 2px 2px 0;
+            background-color: #2ecc71;
+            transition: .5s;
+        }
+        .img{
+            width: 90px;
+            height: 90px;
+            position: relative;
+            border-radius: 45px;
+            background-color: #fff;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            transition: .5s;
+
+        }
+        .img:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%; 
+            background: rgba(100,100,100,0.2);
+            border-radius: 45px 0 0 45px;
+        }
+        .skill-title h3{
+            color:#fff;
+            margin: 0.5rem;
+        }
+
+        .skill-icon{
+            width: 50px;
+            z-index:2;
+
+
+        }
+
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a href="index.html">Back to Home</a>
+    </header>
+    <!-- skill section -->
+    <main>
+        <div class="inner">
+            <div class="header2">
+                <h1>My Skills</h1>
+            </div>
+            <div class="container">
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="html.png" class="skill-icon">
+                        </div>
+                        <h3>HTML</h3>
+                    </div>
+                    <p>HTML (HyperText Markup Language) is the foundation of web development, 
+                        structuring content using elements like headings, paragraphs, links, 
+                        and images.</p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="css.png" class="skill-icon">
+                        </div>
+                        <h3>CSS</h3>
+                    </div>
+                    <p>CSS (Cascading Style Sheets) is used to style and layout web pages. 
+                        It controls colors, fonts, spacing, and positioning. 
+                        CSS works with HTML to enhance design, </p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="javascript.jpg" class="skill-icon">
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <p>JavaScript is a powerful programming language used to create interactive web pages.
+                         It enables dynamic content, animations,
+                         and event handling. </p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="python.png" class="skill-icon">
+                        </div>
+                        <h3>PYTHON</h3>
+                    </div>
+                    <p>Python is a versatile, high-level programming language known for its simplicity and readability. 
+                        It is widely used in web development, data science, automation,
+                         AI, and more, </p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="java.png" class="skill-icon">
+                        </div>
+                        <h3>JAVA</h3>
+                    </div>
+                    <p>Java is a powerful, object-oriented programming language used for web, mobile, and desktop applications. 
+                        It is platform-independent, secure, and widely used in Android development,
+</p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="img">
+                            <img src="sql.png" class="skill-icon">
+                        </div>
+                        <h3>SQL</h3>
+                    </div>
+                    <p>SQL (Structured Query Language) is used to manage and manipulate databases. 
+                        It enables data retrieval, insertion, updating, 
+                        and deletion. </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+    
+</body>
+</html>
